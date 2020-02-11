@@ -15,6 +15,7 @@ import gambar2 from '../../../Picture/tes2.jpg';
 import gambar3 from '../../../Picture/tes3.jpg';
 
 
+
 const items = [
   {
     src: gambar1,
@@ -41,8 +42,9 @@ const items = [
 
 const Example = () => <UncontrolledCarousel items={items} />;
 
+
 function home(){
-    return Example;
+    return <Example />;
 }
 
 export default home;
