@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { UncontrolledCarousel } from 'reactstrap';
+import { Container, Row, Col, InputGroup } from 'reactstrap';
+
 
 
 import {
@@ -44,7 +46,13 @@ const Example = () => <UncontrolledCarousel items={items} />;
 
 
 function home(){
-    return <Example />;
+    return (
+      <div>
+        <Row>
+          <Example />
+        </Row>
+      </div>
+    );
 }
 
 export default home;
