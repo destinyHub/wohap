@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { UncontrolledCarousel } from 'reactstrap';
 import { Container, Row, Col, InputGroup } from 'reactstrap';
-
+import Category from '../../components/category/kategori.js';
 
 
 import {
@@ -50,6 +50,7 @@ function home(){
       <div>
         <Row>
           <Example />
+          <Category />
         </Row>
       </div>
     );
