@@ -10,9 +10,9 @@ import {
   CarouselCaption
 } from 'reactstrap';
 
-import gambar1 from '../../../Picture/tes.jpg';
-import gambar2 from '../../../Picture/tes2.jpg';
-import gambar3 from '../../../Picture/tes3.jpg';
+import gambar1 from '../../Picture/tes.jpg';
+import gambar2 from '../../Picture/tes2.jpg';
+import gambar3 from '../../Picture/tes3.jpg';
 
 
 

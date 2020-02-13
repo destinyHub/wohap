@@ -1,5 +1,6 @@
 import React from 'react';
 import "./header.css";
+import { Container, Row, Col } from 'reactstrap';
 
 import {
     Collapse,
@@ -24,20 +25,28 @@ function header() {
     return (
       <div>
         <p>Wohap</p>
-        <Nav>
-          <NavItem>
-            <NavLink href="https://google.com">Google</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">Another Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink disabled href="#">Disabled Link</NavLink>
-          </NavItem>
-        </Nav>
+          <Nav>
+            <Col>
+              <NavItem>
+                <NavLink href="https://google.com">Google</NavLink>
+              </NavItem>
+            </Col>
+            <Col>
+              <NavItem>
+                <NavLink href="#">Link</NavLink>
+              </NavItem>
+            </Col>
+            <Col>
+              <NavItem>
+                <NavLink href="#">Another Link</NavLink>
+              </NavItem>
+            </Col>
+            <Col>
+              <NavItem>
+                <NavLink disabled href="#">Disabled Link</NavLink>
+              </NavItem>
+            </Col>
+          </Nav>  
         <hr />
         
       </div>
