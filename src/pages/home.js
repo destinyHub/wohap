@@ -6,10 +6,10 @@ import { Row, Container } from 'reactstrap';
 class Home extends Component {
     render() {
         return (
-            <Container>
+            <div>
                 <Header/>
                 <Barang/>
-            </Container>
+            </div>
         );
     }
 }
