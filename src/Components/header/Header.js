@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Header.css";
 import DropdownJenis from "./Components/DropdownJenis";
+import DropdownUser from "./Components/DropdownUser";
 import { Container, Row, Col, InputGroup } from 'reactstrap';
 import { InputGroupAddon, InputGroupText, Input, Button  } from 'reactstrap';
 
@@ -42,17 +43,17 @@ function Header() {
             <Row>
                 {/* <h3>Wohap Meubel</h3> */}
             </Row>
-            <Row>
-                <Col xs="3" style={{marginTop: '15%'}}>
+            <Row style={{marginTop: '17%'}}>
+                <Col xs="3">
                     <DropdownJenis namaToogle="Minimalis"/>
                 </Col>
-                <Col xs="3" style={{marginTop: '15%'}}>
+                <Col xs="3">
                     <DropdownJenis namaToogle="Classical"/>
                 </Col>
-                <Col xs="3" style={{marginTop: '15%'}}>
+                <Col xs="3">
                     <DropdownJenis namaToogle="Vintage"/>
                 </Col>
-                <Col xs="3" style={{marginTop: '15%'}}>
+                <Col xs="3">
                     <DropdownJenis namaToogle="Casual"/>
                 </Col>
             </Row>
@@ -80,16 +81,16 @@ function Header() {
                         </Col>
                         <Col>
                             <NavItem>
-                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>Costumize</NavLink>
+                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>Customize</NavLink>
                             </NavItem>
                         </Col>
                     </Nav>
                 </Col>
             </Row>
-            <Row style={{marginTop: '2%'}}>
+            <Row style={{marginTop: '1%'}}>
                 <Col xs="2"></Col>
                 <Col xs="6">
-                    <InputGroup>
+                    <InputGroup style={{marginTop: '3%'}}>
                         <InputGroupAddon addonType="prepend">
                             <InputGroupText>Cari: </InputGroupText>
                         </InputGroupAddon>
@@ -101,14 +102,14 @@ function Header() {
 
                 <Col xs="4">
                     <Nav>
-                        <Col>
+                        <Col xs="6">
                             <NavItem>
-                            <NavLink href="#"><FaUser style={{color:'#666666',fontWeight:'bold'}}/></NavLink>
+                                <NavLink href="#"><DropdownUser/></NavLink>
                             </NavItem>
                         </Col>
-                        <Col>
+                        <Col xs="6">
                             <NavItem>
-                            <NavLink href="#"><FaCartPlus style={{color:'#666666',fontWeight:'bold'}}/></NavLink>
+                                <NavLink href="#"><Button ><FaCartPlus style={{color:'white',fontWeight:'bold'}}/></Button></NavLink>
                             </NavItem>
                         </Col>
                     </Nav>
