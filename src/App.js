@@ -1,6 +1,7 @@
 import React, {Component , Suspense} from 'react';
 import routes from "./data/routes";
 import Navbar from "./Components/navbar";
+import Barang from "./Components/barang";
 import {
     BrowserRouter as Router,
     Route,
@@ -33,6 +34,9 @@ class App extends Component {
 
                         ))}
                     </Switch>
+                    <Barang>
+                        
+                    </Barang>
                 </Suspense>
             </Router>
         );
