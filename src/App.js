@@ -19,7 +19,7 @@ class App extends Component {
                         <p>loading...</p>
                     </div>
                 )}>
-                    <Navbar/>
+                    {/* <Navbar/> */}
                     <Switch>
                         {routes.map((route,idx) => (
 
@@ -34,9 +34,7 @@ class App extends Component {
 
                         ))}
                     </Switch>
-                    <Barang>
-                        
-                    </Barang>
+                    
                 </Suspense>
             </Router>
         );
