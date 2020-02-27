@@ -64,12 +64,12 @@ function Header() {
                     <Nav style={{marginTop: '1%'}}>
                         <Col>
                             <NavItem>
-                                <NavLink href="#">About Us</NavLink>
+                                <NavLink href="#">AboutUs</NavLink>
                             </NavItem>
                         </Col>
                         <Col>
                             <NavItem>
-                                <NavLink href="#">Contact Us</NavLink>
+                                <NavLink href="#">ContactUs</NavLink>
                             </NavItem>
                         </Col>
                         <Col>
