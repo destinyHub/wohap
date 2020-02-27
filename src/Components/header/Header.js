@@ -29,29 +29,30 @@ import {
   import { Link } from 'react-router-dom';
 
 import Logo from "../../Picture/logo.jpg";
+import Logo2 from "../../Picture/logo3.jpeg";
 
 function Header() {
     return (
-      <div>
+      <div style={{backgroundColor:'#d9d9d9'}}>
         <Row>
           <Col xs="2">
-            <img width="30%" style={{margin: '0%', padding: '0%'}} src={Logo} alt="Card image cap" />
+            <img width="50%" style={{margin: '10%', padding: '0%', marginBottom:'0%'}} src={Logo2} alt="Card image cap" />
           </Col>
           <Col xs="4">
             <Row>
                 {/* <h3>Wohap Meubel</h3> */}
             </Row>
             <Row>
-                <Col xs="3" style={{marginTop: '5%'}}>
+                <Col xs="3" style={{marginTop: '15%'}}>
                     <DropdownJenis namaToogle="Minimalis"/>
                 </Col>
-                <Col xs="3" style={{marginTop: '5%'}}>
+                <Col xs="3" style={{marginTop: '15%'}}>
                     <DropdownJenis namaToogle="Classical"/>
                 </Col>
-                <Col xs="3" style={{marginTop: '5%'}}>
+                <Col xs="3" style={{marginTop: '15%'}}>
                     <DropdownJenis namaToogle="Vintage"/>
                 </Col>
-                <Col xs="3" style={{marginTop: '5%'}}>
+                <Col xs="3" style={{marginTop: '15%'}}>
                     <DropdownJenis namaToogle="Casual"/>
                 </Col>
             </Row>
@@ -61,31 +62,31 @@ function Header() {
             <Row>
                 <Col xs="2"></Col>
                 <Col xs="10">
-                    <Nav style={{marginTop: '1%'}}>
+                    <Nav style={{marginTop: '3%'}}>
                         <Col>
                             <NavItem>
-                                <NavLink href="#">AboutUs</NavLink>
+                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>AboutUs</NavLink>
                             </NavItem>
                         </Col>
                         <Col>
                             <NavItem>
-                                <NavLink href="#">ContactUs</NavLink>
+                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>ContactUs</NavLink>
                             </NavItem>
                         </Col>
                         <Col>
                             <NavItem>
-                                <NavLink href="#">Testimoni</NavLink>
+                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>Testimoni</NavLink>
                             </NavItem>
                         </Col>
                         <Col>
                             <NavItem>
-                                <NavLink href="#">Costumize</NavLink>
+                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>Costumize</NavLink>
                             </NavItem>
                         </Col>
                     </Nav>
                 </Col>
             </Row>
-            <Row>
+            <Row style={{marginTop: '2%'}}>
                 <Col xs="2"></Col>
                 <Col xs="6">
                     <InputGroup>
@@ -94,7 +95,7 @@ function Header() {
                         </InputGroupAddon>
                         <Input placeholder="(Nama Barang)" />
 
-                        <Button color="primary">Cari</Button>{' '}
+                        <Button>Cari</Button>{' '}
                     </InputGroup>
                 </Col>
 
@@ -102,12 +103,12 @@ function Header() {
                     <Nav>
                         <Col>
                             <NavItem>
-                            <NavLink href="#"><FaUser /></NavLink>
+                            <NavLink href="#"><FaUser style={{color:'#666666',fontWeight:'bold'}}/></NavLink>
                             </NavItem>
                         </Col>
                         <Col>
                             <NavItem>
-                            <NavLink href="#"><FaCartPlus /></NavLink>
+                            <NavLink href="#"><FaCartPlus style={{color:'#666666',fontWeight:'bold'}}/></NavLink>
                             </NavItem>
                         </Col>
                     </Nav>
@@ -116,8 +117,8 @@ function Header() {
             </Row>
           </Col>
         </Row>
-        <hr />
-        
+        <hr style={{border: '2px solid', color: '#ffcc00'}}/>
+        {/* #ffcc00 */}
       </div>
     );
   }
