@@ -3,6 +3,6 @@ module.exports = function(app) {
     app.route('/')
         .get(todoList.index);
 
-    // app.route('/users')
-    //     .get(todoList.users);
+    app.route('/users')
+        .get(todoList.index);
 };
