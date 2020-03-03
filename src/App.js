@@ -7,10 +7,17 @@ import {
     Route,
     Switch
 } from "react-router-dom";
+import axios from "axios";
 
 
 class App extends Component {
 
+    componentDidMount(){
+        axios.get("http://localhost:3001/test")
+        .then(res => {
+            console.log(res);
+        })
+    }
     render() {
         return (
             <Router>
