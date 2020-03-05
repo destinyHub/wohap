@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row, Col } from 'reactstrap';
 import { FaCartPlus, FaUser } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const DropdownUser = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -16,8 +17,8 @@ const DropdownUser = (props) => {
         <DropdownItem header>Member</DropdownItem>
 
         <DropdownItem divider />
-        <DropdownItem>Login</DropdownItem>
-        <DropdownItem>Sign Up</DropdownItem>
+        <DropdownItem><Link to="/login">Login</Link></DropdownItem>
+        <DropdownItem><Link to="/signup">Sign Up</Link></DropdownItem>
       </DropdownMenu>
     </Dropdown>
         
