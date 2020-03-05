@@ -31,6 +31,7 @@ import {
 
 import Logo from "../../Picture/logo.jpg";
 import Logo2 from "../../Picture/logo3.jpeg";
+import axios from "axios";
 
 function Header() {
     return (
@@ -66,7 +67,12 @@ function Header() {
                     <Nav style={{marginTop: '3%'}}>
                         <Col>
                             <NavItem>
-                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>AboutUs</NavLink>
+                                <NavLink href="#" onClick={ () => {
+                                   return  axios.get("http://localhost:3001/")
+                                       .then(res => {
+                                           console.log(res.status === 200 ? res.data.values : console.log("error"));
+                                       })
+                                }} style={{color:'#666666',fontWeight:'bold'}}>AboutUs</NavLink>
                             </NavItem>
                         </Col>
                         <Col>
