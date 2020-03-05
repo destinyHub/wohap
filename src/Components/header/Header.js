@@ -68,7 +68,7 @@ function Header(props) {
       <div style={{backgroundColor:'#d9d9d9'}}>
         <Row>
           <Col xs="2">
-            <img width="50%" style={{margin: '10%', padding: '0%', marginBottom:'0%'}} src={Logo2} alt="Card image cap" />
+            <Link to="/"><img width="50%" style={{margin: '10%', padding: '0%', marginBottom:'0%'}} src={Logo2} alt="Card image cap" /></Link>
           </Col>
           <Col xs="4">
             {klasifikasiBarang}
@@ -86,7 +86,7 @@ function Header(props) {
                                        .then(res => {
                                            console.log(res.status === 200 ? res.data.values : console.log("error"));
                                        })
-                                }} style={{color:'#666666',fontWeight:'bold'}}>AboutUs</NavLink>
+                                }}> <Link to="/about" style={{ textDecoration: 'none',color:'#666666',fontWeight:'bold'}}>AboutUs</Link> </NavLink>
                             </NavItem>
                         </Col>
                         <Col>
