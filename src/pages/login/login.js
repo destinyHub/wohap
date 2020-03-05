@@ -5,11 +5,11 @@ import "./login.css";
 export default class Login extends Component {
     render() {
         return (
-            <div className="h-100" style={{height: '100vh'}}>
+            <div>
                 <Row className="pt-5">
                     <Col></Col>
-                    <Col className="card">
-                    <h3 className="card-header text-center">Login</h3>
+                    <Col style={{backgroundColor: '#d9d9d9'}}>
+                    <h3 className="card-header text-center mt-3" style={{backgroundColor: '#ffcc00'}}>Login</h3>
                         <Form className="">
                             <FormGroup>
                                 <Label>Alamat email</Label>

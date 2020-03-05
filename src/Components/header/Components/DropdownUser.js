@@ -17,8 +17,8 @@ const DropdownUser = (props) => {
         <DropdownItem header>Member</DropdownItem>
 
         <DropdownItem divider />
-        <DropdownItem><Link to="/login">Login</Link></DropdownItem>
-        <DropdownItem><Link to="/signup">Sign Up</Link></DropdownItem>
+        <DropdownItem><Link to="/login" style={{textDecoration: 'none',color:'#666666'}}>Login</Link></DropdownItem>
+        <DropdownItem><Link to="/signup" style={{textDecoration: 'none',color:'#666666'}}>Register</Link></DropdownItem>
       </DropdownMenu>
     </Dropdown>
         

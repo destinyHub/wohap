@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
+import "./register.css";
 
 export default class SignUp extends Component {
     render() {
@@ -7,8 +8,8 @@ export default class SignUp extends Component {
             <div>
                 <Row className="pt-5">
                     <Col></Col>
-                    <Col className="card">
-                        <h3 className="card-header text-center">Register</h3>
+                    <Col className="card" style={{backgroundColor: '#d9d9d9'}}>
+                        <h3 className="card-header text-center mt-3" style={{backgroundColor: '#ffcc00'}}>Register</h3>
                         <Form>
                             <FormGroup>
                                 <Label>Nama depan</Label>
