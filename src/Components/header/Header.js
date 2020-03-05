@@ -33,31 +33,45 @@ import Logo from "../../Picture/logo.jpg";
 import Logo2 from "../../Picture/logo3.jpeg";
 import axios from "axios";
 
-function Header() {
+function Header(props) {
+    let pencari,klasifikasiBarang;
+
+    if(props.page == "home"){
+        pencari = 
+        <InputGroup style={{marginTop: '3%'}}>
+            <InputGroupAddon addonType="prepend">
+                <InputGroupText>Cari: </InputGroupText>
+            </InputGroupAddon>
+            <Input placeholder="(Nama Barang)" />
+
+            <Button>Cari</Button>{' '}
+        </InputGroup>;
+
+        klasifikasiBarang =
+        <Row style={{marginTop: '17%'}}>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Minimalis"/>
+            </Col>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Classical"/>
+            </Col>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Vintage"/>
+            </Col>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Casual"/>
+            </Col>
+        </Row>;
+    }
+
     return (
       <div style={{backgroundColor:'#d9d9d9'}}>
         <Row>
           <Col xs="2">
-            <img width="50%" style={{margin: '10%', padding: '0%', marginBottom:'0%'}} src={Logo2} alt="Card image cap" />
+            <Link to="/"><img width="50%" style={{margin: '10%', padding: '0%', marginBottom:'0%'}} src={Logo2} alt="Card image cap" /></Link>
           </Col>
           <Col xs="4">
-            <Row>
-                {/* <h3>Wohap Meubel</h3> */}
-            </Row>
-            <Row style={{marginTop: '17%'}}>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Minimalis"/>
-                </Col>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Classical"/>
-                </Col>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Vintage"/>
-                </Col>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Casual"/>
-                </Col>
-            </Row>
+            {klasifikasiBarang}
           </Col>
 
           <Col xs="6">
@@ -72,7 +86,7 @@ function Header() {
                                        .then(res => {
                                            console.log(res.status === 200 ? res.data.values : console.log("error"));
                                        })
-                                }} style={{color:'#666666',fontWeight:'bold'}}>AboutUs</NavLink>
+                                }}> <Link to="/about" style={{ textDecoration: 'none',color:'#666666',fontWeight:'bold'}}>AboutUs</Link> </NavLink>
                             </NavItem>
                         </Col>
                         <Col>
@@ -93,17 +107,12 @@ function Header() {
                     </Nav>
                 </Col>
             </Row>
+
+
             <Row style={{marginTop: '1%'}}>
                 <Col xs="2"></Col>
                 <Col xs="6">
-                    <InputGroup style={{marginTop: '3%'}}>
-                        <InputGroupAddon addonType="prepend">
-                            <InputGroupText>Cari: </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="(Nama Barang)" />
-
-                        <Button>Cari</Button>{' '}
-                    </InputGroup>
+                    {pencari}
                 </Col>
 
                 <Col xs="4">

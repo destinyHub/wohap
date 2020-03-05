@@ -5,7 +5,7 @@ import {
     CardTitle, CardSubtitle, Button, Col, Row, Container
 } from 'reactstrap';
 
-const Example = () => {
+const KumpulanBarang = () => {
     return (
             <Container>
             <Row xs="4">
@@ -106,4 +106,4 @@ const Example = () => {
     );
 };
 
-export default Example;
+export default KumpulanBarang;
