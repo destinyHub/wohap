@@ -8,7 +8,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Header/>
+                <Header page="home"/>
                 <Slider/>
                 <Barang/>
             </div>
