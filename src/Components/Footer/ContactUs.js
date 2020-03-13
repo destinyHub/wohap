@@ -14,10 +14,11 @@ import{
     Link
 } from 'react-router-dom'
 
-const ContactUs = () => {
-    return (
+// const footer = React.createRef();
 
-        <div style={{backgroundColor:'#d9d9d9'}}>
+const ContactUs = (props) => {
+    return (
+        <div style={{backgroundColor:'#d9d9d9'}} ref={props.footer}>
             <hr style={{ border: '2px solid', color: '#ffcc00' }}></hr>
             <Container>
                 <Row xs="4">

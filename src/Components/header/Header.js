@@ -64,6 +64,10 @@ function Header(props) {
         </Row>;
     }
 
+    function handleClick() {
+        props.footer.current.focus();
+    }
+    
     return (
       <div style={{backgroundColor:'#d9d9d9'}}>
         <Row>
@@ -91,7 +95,7 @@ function Header(props) {
                         </Col>
                         <Col>
                             <NavItem>
-                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>ContactUs</NavLink>
+                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}} onClick={handleClick}>ContactUs</NavLink>
                             </NavItem>
                         </Col>
                         <Col>
