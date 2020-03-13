@@ -1,7 +1,6 @@
 import React, {Component , Suspense} from 'react';
 import routes from "./data/routes";
-import Navbar from "./Components/header/Header";
-import Barang from "./Components/barang";
+
 import {
     BrowserRouter as Router,
     Route,
