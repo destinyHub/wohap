@@ -50,7 +50,7 @@ function Header(props) {
     }
 
     function handleClick() {
-        props.footer.current.focus();
+        // props.footer.current.focus();
     }
     
     return (
