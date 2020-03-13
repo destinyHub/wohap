@@ -81,7 +81,7 @@ function Header(props) {
                                 </Col>
                                 <Col>
                                     <NavItem>
-                                        <NavLink href="#" style={{ color: '#666666', fontWeight: 'bold' }}>ContactUs</NavLink>
+                                        <NavLink href="#" style={{ color: '#666666', fontWeight: 'bold' }} ref={handleClick}>ContactUs</NavLink>
                                     </NavItem>
                                 </Col>
                                 <Col>
