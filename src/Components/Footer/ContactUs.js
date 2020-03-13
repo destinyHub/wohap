@@ -10,7 +10,6 @@ import {
     Container, Row, Col
 } from 'reactstrap';
 
-<<<<<<< Updated upstream
 import{
     Link
 } from 'react-router-dom'
@@ -20,13 +19,7 @@ import{
 const ContactUs = (props) => {
     return (
         <div style={{backgroundColor:'#d9d9d9'}} ref={props.footer}>
-=======
-const ContactUs = () => {
 
-    return (
-
-        <div style={{ backgroundColor: '#d9d9d9' }} >
->>>>>>> Stashed changes
             <hr style={{ border: '2px solid', color: '#ffcc00' }}></hr>
             <Container>
                 <Row xs="4">

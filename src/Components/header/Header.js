@@ -56,43 +56,12 @@ function Header(props) {
     return (
         <div style={{ backgroundColor: '#d9d9d9' }}>
             <Row>
-<<<<<<< Updated upstream
-                <Col xs="2"></Col>
-                <Col xs="10">
-                    <Nav style={{marginTop: '3%'}}>
-                        <Col>
-                            <NavItem>
-                                <NavLink href="#" onClick={ () => {
-                                   return  axios.get("http://localhost:3001/")
-                                       .then(res => {
-                                           console.log(res.status === 200 ? res.data.values : console.log("error"));
-                                       })
-                                }}> <Link to="/about" style={{ textDecoration: 'none',color:'#666666',fontWeight:'bold'}}>AboutUs</Link> </NavLink>
-                            </NavItem>
-                        </Col>
-                        <Col>
-                            <NavItem>
-                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}} onClick={handleClick}>ContactUs</NavLink>
-                            </NavItem>
-                        </Col>
-                        <Col>
-                            <NavItem>
-                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>Testimoni</NavLink>
-                            </NavItem>
-                        </Col>
-                        <Col>
-                            <NavItem>
-                                <NavLink href="#" style={{color:'#666666',fontWeight:'bold'}}>Customize</NavLink>
-                            </NavItem>
-                        </Col>
-                    </Nav>
-=======
+
                 <Col xs="2">
                     <Link to="/"><img width="50%" style={{ margin: '10%', padding: '0%', marginBottom: '0%' }} src={Logo2} alt="Card image cap" /></Link>
                 </Col>
                 <Col xs="4">
                     {klasifikasiBarang}
->>>>>>> Stashed changes
                 </Col>
 
                 <Col xs="6">

@@ -11,13 +11,9 @@ class Home extends Component {
             <div>
                 <Header page="home" footer={foot}/>
                 <Slider/>
-<<<<<<< Updated upstream
-                <Barang/>
-                <ContactUs footer={foot}/>
-=======
+
                 <KumpulanBarang/>
                 <ContactUs/>
->>>>>>> Stashed changes
             </div>
         );
     }
