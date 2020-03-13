@@ -19,7 +19,7 @@ import Logo2 from "../../Picture/logo3.jpeg";
 import axios from "axios";
 
 function Header(props) {
-    let pencari, klasifikasiBarang;
+    let pencari, klasifikasiBarang,judulTestimoni;
 
     if (props.page == "home") {
         pencari =
@@ -47,6 +47,9 @@ function Header(props) {
                     <DropdownJenis namaToogle="Casual" />
                 </Col>
             </Row>;
+    }
+    else if(props.page=="testimoni"){
+        judulTestimoni = <h1 style={{ marginTop: '17%' }}>Testimoni</h1>
     }
 
     function handleClick() {
@@ -86,7 +89,7 @@ function Header(props) {
                                 </Col>
                                 <Col>
                                     <NavItem>
-                                        <NavLink href="#" style={{ color: '#666666', fontWeight: 'bold' }}>Testimoni</NavLink>
+                                        <NavLink href="/testimoni" style={{ color: '#666666', fontWeight: 'bold' }}>Testimoni</NavLink>
                                     </NavItem>
                                 </Col>
                                 <Col>

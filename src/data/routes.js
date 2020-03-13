@@ -5,6 +5,7 @@ const Notfound =React.lazy(() => import("../pages/notfound"));
 const Login =React.lazy(() => import("../pages/login/login"));
 const SignUp =React.lazy(() => import("../pages/register/register"));
 const InfoBarang = React.lazy(() => import("../pages/infobarang/infobarang"));
+const Testimoni = React.lazy(() => import("../pages/testimoni/testimoni"));
 const routes = [
     {
         path: "/",
@@ -35,6 +36,12 @@ const routes = [
         exact: true,
         name: "infobarang",
         component: InfoBarang
+    },
+    {
+        path: "/testimoni",
+        exact: true,
+        name: "testimoni",
+        component: Testimoni
     },
     {
 
