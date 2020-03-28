@@ -7,9 +7,11 @@ export default class Login extends Component {
         return (
             <div>
                 <Row className="pt-5">
-                    <Col></Col>
-                    <Col style={{backgroundColor: '#d9d9d9'}}>
-                    <h3 className="card-header text-center mt-3" style={{backgroundColor: '#ffcc00'}}>Login</h3>
+                    <Col xs="2" sm="2" md="3"
+                                    lg="4" xl="4"></Col>
+                    <Col xs="8" sm="8" md="6"
+                                    lg="4" xl="4" style={{ backgroundColor: '#d9d9d9' }}>
+                        <h3 className="text-center pt-3">Login</h3>
                         <Form className="">
                             <FormGroup>
                                 <Label>Alamat email</Label>
@@ -28,13 +30,14 @@ export default class Login extends Component {
                                 </div>
                             </FormGroup>
 
-                            <Button type="submit" className="btn btn-primary btn-block">Login</Button>
+                            <Button type="submit" className="btn btn-block" style={{color: "black", backgroundColor: '#ffcc00', border: "none"}}>Login</Button>
                             <p className="forgot-password text-right">
                                 Lupa <a href="#">password?</a>
                             </p>
                         </Form>
                     </Col>
-                    <Col></Col>
+                    <Col xs="2" sm="2" md="3"
+                                    lg="4" xl="4"></Col>
                 </Row>
             </div>
         );
