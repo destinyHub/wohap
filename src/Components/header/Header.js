@@ -19,7 +19,7 @@ import Logo2 from "../../Picture/logo3.jpeg";
 import axios from "axios";
 
 function Header(props) {
-    let pencari, klasifikasiBarang, judulTestimoni;
+    let pencari, klasifikasiBarang;
 
     if (props.page == "home") {
         pencari =
@@ -48,9 +48,6 @@ function Header(props) {
                 </Col>
             </Row>;
     }
-    else if (props.page == "testimoni") {
-        judulTestimoni = <h1 style={{ marginTop: '17%' }}>Testimoni</h1>
-    }
 
     function handleClick() {
         // props.footer.current.focus();
@@ -65,7 +62,6 @@ function Header(props) {
                 </Col>
                 <Col xs="4">
                     {klasifikasiBarang}
-                    {judulTestimoni}
                 </Col>
 
                 <Col xs="6">

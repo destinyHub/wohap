@@ -10,7 +10,7 @@ class Testimoni extends Component {
     render() {
         return (
             <div>
-                <Header page="testimoni" />
+                <Header page="home" />
                 <Row>
                     <Col xs="2"></Col>
                     <Col xs="8">
