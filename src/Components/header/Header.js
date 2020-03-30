@@ -58,6 +58,7 @@ function Header(props) {
 
     function handleClick() {
         // props.footer.current.focus();
+        window.scrollTo(0,1280);
     }
 
     return (
@@ -98,7 +99,7 @@ function Header(props) {
                                 </Col>
                                 <Col>
                                     <NavItem>
-                                        <NavLink href="#" style={{ color: 'black', fontWeight: 'bold' }} ref={handleClick}>ContactUs</NavLink>
+                                        <NavLink href="#" style={{ color: 'black', fontWeight: 'bold' }} onClick={handleClick}>ContactUs</NavLink>
                                     </NavItem>
                                 </Col>
                             </Nav>
