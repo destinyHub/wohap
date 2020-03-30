@@ -1,5 +1,4 @@
 import React from 'react';
-import Test from '../../318x180.svg';
 import Header from "../../Components/header/Header";
 import Sofa from "../../Picture/Gambar_Kategori/sofa2.jpg";
 import {

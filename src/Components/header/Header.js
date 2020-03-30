@@ -20,34 +20,31 @@ import axios from "axios";
 
 function Header(props) {
     let pencari, klasifikasiBarang;
+    pencari =
+        <InputGroup style={{ marginTop: '3%' }}>
+            <InputGroupAddon addonType="prepend">
+                <InputGroupText>Cari: </InputGroupText>
+            </InputGroupAddon>
+            <Input placeholder="(Nama Barang)" />
 
-    if (props.page == "home") {
-        pencari =
-            <InputGroup style={{ marginTop: '3%' }}>
-                <InputGroupAddon addonType="prepend">
-                    <InputGroupText>Cari: </InputGroupText>
-                </InputGroupAddon>
-                <Input placeholder="(Nama Barang)" />
+            <Button>Cari</Button>{' '}
+        </InputGroup>;
 
-                <Button>Cari</Button>{' '}
-            </InputGroup>;
-
-        klasifikasiBarang =
-            <Row style={{ marginTop: '17%' }}>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Minimalis" />
-                </Col>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Classical" />
-                </Col>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Vintage" />
-                </Col>
-                <Col xs="3">
-                    <DropdownJenis namaToogle="Casual" />
-                </Col>
-            </Row>;
-    }
+    klasifikasiBarang =
+        <Row style={{ marginTop: '17%' }}>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Minimalis" />
+            </Col>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Classical" />
+            </Col>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Vintage" />
+            </Col>
+            <Col xs="3">
+                <DropdownJenis namaToogle="Casual" />
+            </Col>
+        </Row>;
 
     function handleClick() {
         // props.footer.current.focus();
