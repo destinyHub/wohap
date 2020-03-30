@@ -5,7 +5,7 @@ import DropdownUser from "./Components/DropdownUser";
 import { Row, Col, InputGroup } from 'reactstrap';
 import { InputGroupAddon, InputGroupText, Input, Button } from 'reactstrap';
 
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaSearch, FaHeart } from "react-icons/fa";
 
 import {
     Nav,
@@ -19,15 +19,12 @@ import Logo2 from "../../Picture/logo3.jpeg";
 import axios from "axios";
 
 function Header(props) {
-    let pencari, klasifikasiBarang;
+    let pencari, klasifikasiBarang,statusInSearch;
+    statusInSearch=false;
     pencari =
-        <InputGroup style={{ marginTop: '3%' }}>
-            <InputGroupAddon addonType="prepend">
-                <InputGroupText>Cari: </InputGroupText>
-            </InputGroupAddon>
-            <Input placeholder="(Nama Barang)" />
-
-            <Button>Cari</Button>{' '}
+        <InputGroup size="lg" style={{ marginTop: '1%' }}>
+                <Button id="searchBtn" alignSelf='right' color="" onClick={handleSearch}><FaSearch size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button>
+                <Input hidden="true" id="inSearch" placeholder="(Nama Barang)" />
         </InputGroup>;
 
     klasifikasiBarang =
@@ -46,12 +43,25 @@ function Header(props) {
             </Col>
         </Row>;
 
+    function handleSearch(){
+        let kotakIsi = document.getElementById("inSearch");
+        let tombolSearch = document.getElementById("searchBtn");
+        if(statusInSearch){
+            statusInSearch = !statusInSearch;
+            kotakIsi.hidden = true;
+        }
+        else{
+            statusInSearch = !statusInSearch;
+            kotakIsi.hidden = false;
+        }
+    }
+
     function handleClick() {
         // props.footer.current.focus();
     }
 
     return (
-        <div style={{ backgroundColor: '#d9d9d9' }}>
+        <div style={{ backgroundColor: 'white' }}>
             <Row>
 
                 <Col xs="2">
@@ -73,22 +83,22 @@ function Header(props) {
                                                 .then(res => {
                                                     console.log(res.status === 200 ? res.data.values : console.log("error"));
                                                 })
-                                        }}> <Link to="/about" style={{ textDecoration: 'none', color: '#666666', fontWeight: 'bold' }}>AboutUs</Link> </NavLink>
+                                        }}> <Link to="/about" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}>AboutUs</Link> </NavLink>
                                     </NavItem>
                                 </Col>
                                 <Col>
                                     <NavItem>
-                                        <NavLink href="#" style={{ color: '#666666', fontWeight: 'bold' }} ref={handleClick}>ContactUs</NavLink>
+                                        <NavLink href="/testimoni" style={{ color: 'black', fontWeight: 'bold' }}>Testimoni</NavLink>
                                     </NavItem>
                                 </Col>
                                 <Col>
                                     <NavItem>
-                                        <NavLink href="/testimoni" style={{ color: '#666666', fontWeight: 'bold' }}>Testimoni</NavLink>
+                                        <NavLink href="#" style={{ color: 'black', fontWeight: 'bold' }}>Customize</NavLink>
                                     </NavItem>
                                 </Col>
                                 <Col>
                                     <NavItem>
-                                        <NavLink href="#" style={{ color: '#666666', fontWeight: 'bold' }}>Customize</NavLink>
+                                        <NavLink href="#" style={{ color: 'black', fontWeight: 'bold' }} ref={handleClick}>ContactUs</NavLink>
                                     </NavItem>
                                 </Col>
                             </Nav>
@@ -97,21 +107,26 @@ function Header(props) {
 
 
                     <Row style={{ marginTop: '1%' }}>
-                        <Col xs="2"></Col>
-                        <Col xs="6">
+                        <Col xs="4"></Col>
+                        <Col xs="4">
                             {pencari}
                         </Col>
 
                         <Col xs="4">
                             <Nav>
-                                <Col xs="6">
+                                <Col xs="4">
                                     <NavItem>
                                         <NavLink href="#"><DropdownUser /></NavLink>
                                     </NavItem>
                                 </Col>
-                                <Col xs="6">
+                                <Col xs="4" style={{ marginTop: '1%', paddingRight:'0%' }}>
                                     <NavItem>
-                                        <NavLink href="#"><Button ><FaCartPlus style={{ color: 'white', fontWeight: 'bold' }} /></Button></NavLink>
+                                        <NavLink href="#"><Button style={{padding:'0%',margin:'0%'}} color=""><FaHeart size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
+                                    </NavItem>
+                                </Col>
+                                <Col xs="4" style={{ marginTop: '1%', paddingLeft:'0%' }}>
+                                    <NavItem>
+                                        <NavLink href="#"><Button style={{padding:'0%',margin:'0%'}} color=""><FaCartPlus size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
                                     </NavItem>
                                 </Col>
                             </Nav>

@@ -8,8 +8,8 @@ const DropdownJenis = (props) => {
 
   return (
     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle caret>
-        {props.namaToogle}
+      <DropdownToggle color="">
+        <h4>{props.namaToogle}</h4>
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem header>Barang</DropdownItem>

@@ -10,15 +10,15 @@ const DropdownUser = (props) => {
 
   return (
     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle caret>
-        <FaUser style={{color:'white',fontWeight:'bold'}}/>
+      <DropdownToggle color="">
+        <FaUser size={25} style={{color:'black',fontWeight:'bold'}}/>
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem header>Member</DropdownItem>
 
         <DropdownItem divider />
-        <DropdownItem><Link to="/login" style={{textDecoration: 'none',color:'#666666'}}>Login</Link></DropdownItem>
-        <DropdownItem><Link to="/signup" style={{textDecoration: 'none',color:'#666666'}}>Register</Link></DropdownItem>
+        <DropdownItem><Link to="/login" style={{textDecoration: 'none',color:'black'}}>Login</Link></DropdownItem>
+        <DropdownItem><Link to="/signup" style={{textDecoration: 'none',color:'black'}}>Register</Link></DropdownItem>
       </DropdownMenu>
     </Dropdown>
         
