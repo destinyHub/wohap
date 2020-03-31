@@ -11,14 +11,14 @@ const InfoBarang = () => {
         <div>
             <Header />
             <Container>
-                <Row xs="2">
+                <Row xs="2" style={{ border: '2px solid black' }}>
                     <Col>
-                        <Card style={{ width: '75%' }}>
+                        <Card style={{ width: '100%', border: 'none' }}>
                             <CardImg style={{ height: '300px' }} top src={Sofa} alt="Card image cap" />
                         </Card>
                     </Col>
                     <Col>
-                        <Card style={{ width: '75%' }}>
+                        <Card style={{ width: '100%', border: 'none'}}>
                             <CardBody>
                                 <CardTitle><h3>Sofa</h3></CardTitle>
                                 <CardSubtitle>Sofa paling nyaman untuk duduk, cocok untuk disimpan di ruang keluarga</CardSubtitle>

@@ -6,9 +6,7 @@ import {
 } from 'reactstrap';
 //import { FaHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
 import { FaHeart } from "react-icons/fa";
-
 class Produk extends React.Component {
     state = { isFavorite: false }
 
@@ -20,9 +18,8 @@ class Produk extends React.Component {
             })
         }} ></FaHeart>
             <Link to="/infobarang" style={{ textDecoration: 'none', color: '#666666', fontWeight: 'bold' }}>
-                <Card style={{ width: '100%' }}>
-                    <CardImg top src={Test} alt="Card image cap" />
-
+                <Card style={{ width: '100%'}}>
+                    <CardImg top src={Test} alt="Card image cap"/>
                     <CardBody>
                         <CardTitle>Sofa</CardTitle>
                         <CardSubtitle>Rp 250.000</CardSubtitle>
