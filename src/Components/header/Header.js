@@ -74,8 +74,8 @@ function Header(props) {
 
                 <Col xs="6">
                     <Row>
-                        <Col xs="2"></Col>
-                        <Col xs="10">
+                        <Col xs="1"></Col>
+                        <Col xs="11">
                             <Nav style={{ marginTop: '3%' }}>
                                 <Col>
                                     <NavItem>
@@ -99,7 +99,7 @@ function Header(props) {
                                 </Col>
                                 <Col>
                                     <NavItem>
-                                        <NavLink href="#" style={{ color: 'black', fontWeight: 'bold' }} onClick={handleClick}>ContactUs</NavLink>
+                                        <NavLink href="#" style={{ color: 'black', fontWeight: 'bold' }} onClick={handleClick}>Contact Us</NavLink>
                                     </NavItem>
                                 </Col>
                             </Nav>
