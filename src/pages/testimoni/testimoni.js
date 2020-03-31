@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Header from '../../Components/header/Header';
 import { Card, CardBody, Row, Col } from 'reactstrap';
 import TestimoniCard from './components/testimonicard';
-import FotoMike from '../../Picture/mike.jpg';
-import FotoIrwan from '../../Picture/foto_pas_rpl_crop.jpg';
-import FotoAlvin from '../../Picture/alvin.jpg';
+import FotoMike from '../../Picture/Customer/mike.jpg';
+import FotoIrwan from '../../Picture/Customer/foto_pas_rpl_crop.jpg';
+import FotoAlvin from '../../Picture/Customer/alvin.jpg';
 import Footer from '../../Components/Footer/ContactUs';
 class Testimoni extends Component {
     render() {

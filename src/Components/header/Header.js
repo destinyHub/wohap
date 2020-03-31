@@ -19,12 +19,12 @@ import Logo2 from "../../Picture/logo3.jpeg";
 import axios from "axios";
 
 function Header(props) {
-    let pencari, klasifikasiBarang,statusInSearch;
-    statusInSearch=false;
+    let pencari, klasifikasiBarang, statusInSearch;
+    statusInSearch = false;
     pencari =
         <InputGroup size="lg" style={{ marginTop: '1%' }}>
-                <Button id="searchBtn" alignSelf='right' color="" onClick={handleSearch}><FaSearch size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button>
-                <Input hidden="true" id="inSearch" placeholder="(Nama Barang)" />
+            <Button id="searchBtn" alignSelf='right' color="" onClick={handleSearch}><FaSearch size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button>
+            <Input hidden="true" id="inSearch" placeholder="(Nama Barang)" />
         </InputGroup>;
 
     klasifikasiBarang =
@@ -43,14 +43,14 @@ function Header(props) {
             </Col>
         </Row>;
 
-    function handleSearch(){
+    function handleSearch() {
         let kotakIsi = document.getElementById("inSearch");
         let tombolSearch = document.getElementById("searchBtn");
-        if(statusInSearch){
+        if (statusInSearch) {
             statusInSearch = !statusInSearch;
             kotakIsi.hidden = true;
         }
-        else{
+        else {
             statusInSearch = !statusInSearch;
             kotakIsi.hidden = false;
         }
@@ -58,7 +58,7 @@ function Header(props) {
 
     function handleClick() {
         // props.footer.current.focus();
-        window.scrollTo(0,1280);
+        window.scrollTo(0, 1280);
     }
 
     return (
@@ -108,26 +108,26 @@ function Header(props) {
 
 
                     <Row style={{ marginTop: '1%' }}>
-                        <Col xs="4"></Col>
-                        <Col xs="4">
-                            {pencari}
-                        </Col>
+                        <Col xs="2"></Col>
 
-                        <Col xs="4">
+                        <Col xs="10">
                             <Nav>
-                                <Col xs="4">
+                                <Col xs="6">
+                                    {pencari}
+                                </Col>
+                                <Col xs="2">
                                     <NavItem>
                                         <NavLink href="#"><DropdownUser /></NavLink>
                                     </NavItem>
                                 </Col>
-                                <Col xs="4" style={{ marginTop: '1%', paddingRight:'0%' }}>
+                                <Col xs="2" style={{ marginTop: '1%', paddingRight: '0%' }}>
                                     <NavItem>
-                                        <NavLink href="#"><Button style={{padding:'0%',margin:'0%'}} color=""><FaHeart size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
+                                        <NavLink href="#"><Button style={{ padding: '0%', margin: '0%' }} color=""><FaHeart size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
                                     </NavItem>
                                 </Col>
-                                <Col xs="4" style={{ marginTop: '1%', paddingLeft:'0%' }}>
+                                <Col xs="2" style={{ marginTop: '1%', paddingLeft: '0%' }}>
                                     <NavItem>
-                                        <NavLink href="#"><Button style={{padding:'0%',margin:'0%'}} color=""><FaCartPlus size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
+                                        <NavLink href="#"><Button style={{ padding: '0%', margin: '0%' }} color=""><FaCartPlus size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
                                     </NavItem>
                                 </Col>
                             </Nav>
