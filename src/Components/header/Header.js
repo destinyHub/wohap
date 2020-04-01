@@ -19,12 +19,11 @@ import Logo2 from "../../Picture/logo3.jpeg";
 import axios from "axios";
 
 function Header(props) {
-    let pencari, klasifikasiBarang, statusInSearch;
-    statusInSearch = false;
+    let pencari, klasifikasiBarang;
     pencari =
         <InputGroup size="lg" style={{ marginTop: '1%' }}>
-            <Button id="searchBtn" alignSelf='right' color="" onClick={handleSearch}><FaSearch size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button>
-            <Input hidden="true" id="inSearch" placeholder="(Nama Barang)" />
+            <Input placeholder="(Nama Barang)" />
+            <Button id="searchBtn" alignSelf='right' color=""><FaSearch size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button>
         </InputGroup>;
 
     klasifikasiBarang =
@@ -42,19 +41,6 @@ function Header(props) {
                 <DropdownJenis namaToogle="Casual" />
             </Col>
         </Row>;
-
-    function handleSearch() {
-        let kotakIsi = document.getElementById("inSearch");
-        let tombolSearch = document.getElementById("searchBtn");
-        if (statusInSearch) {
-            statusInSearch = !statusInSearch;
-            kotakIsi.hidden = true;
-        }
-        else {
-            statusInSearch = !statusInSearch;
-            kotakIsi.hidden = false;
-        }
-    }
 
     function handleClick() {
         // props.footer.current.focus();
@@ -113,7 +99,9 @@ function Header(props) {
                         <Col xs="10">
                             <Nav>
                                 <Col xs="6">
-                                    {pencari}
+                                    <NavItem>
+                                        {pencari}
+                                    </NavItem>
                                 </Col>
                                 <Col xs="2">
                                     <NavItem>
