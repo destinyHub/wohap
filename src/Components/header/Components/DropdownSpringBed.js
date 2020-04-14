@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row, Col } from 'reactstrap';
 
-const DropdownJenis = (props) => {
+const DropdownSpringBed = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -16,17 +16,16 @@ const DropdownJenis = (props) => {
         <h4>{props.namaToogle}</h4>
       </DropdownToggle>
       <DropdownMenu>
-        <DropdownItem header>Barang</DropdownItem>
+        <DropdownItem header>Merek</DropdownItem>
 
         <DropdownItem divider />
-        <DropdownItem>Meja Makan</DropdownItem>
-        <DropdownItem>Meja Tamu</DropdownItem>
-        <DropdownItem>Lemari Pajangan</DropdownItem>
-        <DropdownItem>Lemari Tamu</DropdownItem>
+        <DropdownItem>King Coil</DropdownItem>
+        <DropdownItem>Florenza</DropdownItem>
+        <DropdownItem>Tempur</DropdownItem>
       </DropdownMenu>
     </Dropdown>
         
   );
 }
 
-export default DropdownJenis;
+export default DropdownSpringBed;

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Header.css";
 import DropdownJenis from "./Components/DropdownJenis";
+import DropdownSprinBed from "./Components/DropdownSpringBed";
 import DropdownUser from "./Components/DropdownUser";
 import { Row, Col, InputGroup } from 'reactstrap';
 import { InputGroupAddon, InputGroupText, Input, Button } from 'reactstrap';
@@ -23,11 +24,11 @@ function Header(props) {
     pencari =
         <InputGroup size="lg" style={{ marginTop: '1%' }}>
             <Input placeholder="(Nama Barang)" />
-            <Button id="searchBtn" alignSelf='right' color=""><FaSearch size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button>
+            <Button id="searchBtn" alignSelf='right' color=""><FaSearch size={25} style={{ color: 'black'}} /></Button>
         </InputGroup>;
 
     klasifikasiBarang =
-        <Row style={{ marginTop: '17%' }}>
+        <Row style={{ marginTop: '17%'}}>
             <Col xs="3">
                 <DropdownJenis namaToogle="Minimalis" />
             </Col>
@@ -38,7 +39,7 @@ function Header(props) {
                 <DropdownJenis namaToogle="Vintage" />
             </Col>
             <Col xs="3">
-                <DropdownJenis namaToogle="Casual" />
+                <DropdownSprinBed namaToogle="Spring bed" />
             </Col>
         </Row>;
 
@@ -110,12 +111,12 @@ function Header(props) {
                                 </Col>
                                 <Col xs="2" style={{ marginTop: '1%', paddingRight: '0%' }}>
                                     <NavItem>
-                                        <NavLink href="#"><Button style={{ padding: '0%', margin: '0%' }} color=""><FaHeart size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
+                                        <NavLink href="#"><Button style={{ padding: '0%', margin: '0%' }} color=""><FaHeart size={25} style={{ color: 'black'}} /></Button></NavLink>
                                     </NavItem>
                                 </Col>
                                 <Col xs="2" style={{ marginTop: '1%', paddingLeft: '0%' }}>
                                     <NavItem>
-                                        <NavLink href="#"><Button style={{ padding: '0%', margin: '0%' }} color=""><FaCartPlus size={25} style={{ color: 'black', fontWeight: 'bold' }} /></Button></NavLink>
+                                        <NavLink href="#"><Button style={{ padding: '0%', margin: '0%' }} color=""><FaCartPlus size={25} style={{ color: 'black'}} /></Button></NavLink>
                                     </NavItem>
                                 </Col>
                             </Nav>
