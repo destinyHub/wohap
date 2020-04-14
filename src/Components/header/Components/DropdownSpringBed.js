@@ -11,6 +11,7 @@ const DropdownSpringBed = (props) => {
   const onMouseEnter = () => {
         setDropdownOpen(true);
         document.getElementById(namaToogle).style.textDecoration = "underline";
+        document.getElementById(namaToogle).style.textDecorationColor = "#ffcc00";
     }
 
   const onMouseLeave = () => {

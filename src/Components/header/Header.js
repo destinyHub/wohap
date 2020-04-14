@@ -53,16 +53,15 @@ function Header(props) {
             <Row>
 
                 <Col xs="2">
-                    <Link to="/"><img width="50%" style={{ margin: '10%', padding: '0%', marginBottom: '0%' }} src={Logo2} alt="Card image cap" /></Link>
+                    <Link to="/"><img width="70%" style={{ margin: '10%', padding: '0%', marginBottom: '0%' }} src={Logo2} alt="Card image cap" /></Link>
                 </Col>
-                <Col xs="4">
+                <Col xs="5">
                     {klasifikasiBarang}
                 </Col>
 
-                <Col xs="6">
+                <Col xs="5">
                     <Row>
-                        <Col xs="1"></Col>
-                        <Col xs="11">
+                        <Col xs="12">
                             <Nav style={{ marginTop: '3%' }}>
                                 <Col>
                                     <NavItem>
@@ -95,9 +94,9 @@ function Header(props) {
 
 
                     <Row style={{ marginTop: '1%' }}>
-                        <Col xs="2"></Col>
+                        {/* <Col xs=""></Col> */}
 
-                        <Col xs="10">
+                        <Col xs="12">
                             <Nav>
                                 <Col xs="6">
                                     <NavItem>
