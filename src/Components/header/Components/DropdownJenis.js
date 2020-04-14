@@ -6,14 +6,22 @@ const DropdownJenis = (props) => {
 
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
-  const onMouseEnter = () => setDropdownOpen(true);
+  var namaToogle = props.namaToogle;
 
-  const onMouseLeave = () => setDropdownOpen(false);
+  const onMouseEnter = () => {
+        setDropdownOpen(true);
+        document.getElementById(namaToogle).style.textDecoration = "underline";
+    }
+
+  const onMouseLeave = () => {
+      setDropdownOpen(false);
+      document.getElementById(namaToogle).style.textDecoration = "none";
+    }
 
   return (
     <Dropdown isOpen={dropdownOpen} toggle={toggle} onMouseOver={onMouseEnter} onMouseLeave={onMouseLeave}>
       <DropdownToggle color="">
-        <h4>{props.namaToogle}</h4>
+        <h4 id={namaToogle}>{namaToogle}</h4>
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem header>Barang</DropdownItem>
